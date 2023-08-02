@@ -1,5 +1,5 @@
-; Aluno: João Marcelo Candido Borges]
-; Matri�cula: 20190112971
+; Aluno: JoÃ£o Marcelo Candido Borges]
+; Matri­cula: 20190112971
 
 .686
 .model flat, stdcall
@@ -8,7 +8,6 @@ option casemap:none
 include \masm32\include\kernel32.inc
 include \masm32\include\msvcrt.inc
 include \masm32\include\windows.inc
-include \masm32\macros\macros.asm
 includelib \masm32\lib\kernel32.lib
 includelib \masm32\lib\msvcrt.lib
 include \masm32\include\masm32.inc
@@ -19,7 +18,7 @@ includelib \masm32\lib\masm32.lib
 nome_arquivo db 50 dup(0)  ;nome do arquivo de entrada
 saida_arquivo db 30 dup(0) ;nome do arquivo de saida
 aux_string db 50 dup(0)    ;string aux para ajudar a tratar caracteres especiais
-fileBuffer db 54 dup(0)    ;array de bytes que serão gravados no arquivo
+fileBuffer db 54 dup(0)    ;array de bytes que serÃ£o gravados no arquivo
 pixels db 3 dup(0)         ;array de bytes que representam os pixels
 
 mensagem_1 db "Digite o nome do arquivo de entrada:",0
@@ -80,7 +79,7 @@ call remove_cl_lf ;chama a funcao que trata os caracteres especiais
 
 invoke atodw, addr aux_string ;converte a string aux para inteiro
 
-mov valor, eax ;o valor é retornado em eax e movido para sua variavel correta
+mov valor, eax ;o valor Ã© retornado em eax e movido para sua variavel correta
 
 push offset nome_arquivo
 call remove_cl_lf
